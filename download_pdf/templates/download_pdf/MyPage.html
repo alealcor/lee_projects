@@ -1,0 +1,14 @@
+{% extends "global/Page.html" %}
+{% load otree static %}
+
+{% block title %}
+    Pagina de descarga
+{% endblock %}
+
+{% block content %}
+
+    <a href="../../PDF/facturacion.pdf" class="btn" download="factura.pdf">DESCARGAR</a>
+
+    {% next_button %}
+
+{% endblock %}
