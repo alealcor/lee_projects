@@ -20,6 +20,12 @@ SESSION_CONFIGS = [
         num_demo_participants=1,
         app_sequence=['survey', 'payment_info'],
     ),
+    dict(
+        name='download_pdf',
+        display_name='download_pdf',
+        num_demo_participants=1,
+        app_sequence=['download_pdf'],
+    ),
 ]
 
 # if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
