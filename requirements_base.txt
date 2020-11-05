@@ -1,1 +1,1 @@
-otree>=3.0.9
+otree[mturk]>=3.0.9
