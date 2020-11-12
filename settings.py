@@ -28,7 +28,7 @@ SESSION_CONFIGS = [
     ),
 ]
 
-mturk_hit_settings = =dict(
+mturk_hit_settings = dict(
         keywords='bonus, study',
         title='Test Experiment (time - how many i pay)',
         description='Description for your experiment',
