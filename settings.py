@@ -28,25 +28,23 @@ SESSION_CONFIGS = [
     ),
 ]
 
-# if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
-# in SESSION_CONFIGS, except those that explicitly override it.
-# the session config can be accessed from methods in your apps as self.session.config,
-# e.g. self.session.config['participation_fee']
-
-SESSION_CONFIG_DEFAULTS = dict(
-    real_world_currency_per_point=1.00, 
-    participation_fee=0.00, doc="",  
-    mturk_hit_settings=dict(
+mturk_hit_settings = =dict(
         keywords='bonus, study',
-        title='Title for your experiment',
+        title='Test Experiment (time - how many i pay)',
         description='Description for your experiment',
         frame_height=500,
         template='global/mturk_template.html',
         minutes_allotted_per_assignment=60,
         expiration_hours=7 * 24,
         qualification_requirements=[])
+
+# if you set a property in SESSION_CONFIG_DEFAULTS, it will be inherited by all configs
+# in SESSION_CONFIGS, except those that explicitly override it.
+# the session config can be accessed from methods in your apps as self.session.config,
+# e.g. self.session.config['participation_fee']
+
+SESSION_CONFIG_DEFAULTS = dict(real_world_currency_per_point=1.00, participation_fee=0.00, doc="",  mturk_hit_settings = mturk_hit_settings)
     # grant_qualification_id='YOUR_QUALIFICATION_ID_HERE', # to prevent retakes
-)
 
 # ISO-639 code
 # for example: de, fr, ja, ko, zh-hans
@@ -77,6 +75,9 @@ Here are some oTree games.
 SECRET_KEY = 'gb*8so@60g4miuwi_s^dgqx4750lky9u0@6zt_@x(jm&h2-y=='
 
 INSTALLED_APPS = ['otree']
+
+AWS_ACCESS_KEY_ID = environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = environ.get('AWS_SECRET_ACCESS_KEY')
 
 # inactive session configs
 # dict(name='trust', display_name="Trust Game", num_demo_participants=2, app_sequence=['trust', 'payment_info']),
